@@ -1,0 +1,4 @@
+openssl genpkey -algorithm RSA -out private.key
+openssl req -new -key private.key -out csr.csr
+openssl x509 -req -days 365 -in csr.csr -signkey private.key -out certificate.crt
+
